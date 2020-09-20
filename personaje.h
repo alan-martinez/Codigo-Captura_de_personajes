@@ -7,7 +7,7 @@ struct personaje
 {
     char nombre[20];
     char tipo[20];
-    int fuerza;
+    float fuerza;
     int salud;
 }personajes[5];
 
@@ -20,7 +20,7 @@ void capturar_personajes() {
         printf("Tipo: ");
         scanf("%s", personajes[cont].tipo);
         printf("Fuerza: ");
-        scanf("%i", &personajes[cont].fuerza);
+        scanf("%f", &personajes[cont].fuerza);
         printf("Salud: ");
         scanf("%i", &personajes[cont].salud);
         cont++;
@@ -37,7 +37,7 @@ void mostrar_personajes() {
     {
         printf("Nombre: %s\n", personajes[i].nombre);
         printf("Tipo: %s\n", personajes[i].tipo);
-        printf("Fuerza: %i\n", personajes[i].fuerza);
+        printf("Fuerza: %f\n", personajes[i].fuerza);
         printf("Salud: %i\n", personajes[i].salud);
     }    
 }
