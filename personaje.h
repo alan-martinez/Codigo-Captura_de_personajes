@@ -7,7 +7,7 @@ struct personaje
 {
     char nombre[20];
     char tipo[20];
-    float fuerza;
+    int fuerza;
     int salud;
 }personajes[5];
 
@@ -20,14 +20,15 @@ void capturar_personajes() {
         printf("Tipo: ");
         scanf("%s", personajes[cont].tipo);
         printf("Fuerza: ");
-        scanf("%f", &personajes[cont].fuerza);
+        scanf("%i", &personajes[cont].fuerza);
         printf("Salud: ");
         scanf("%i", &personajes[cont].salud);
         cont++;
     }
     else
     {
-        printf("Arreglo de personajes está lleno\n");
+        printf("Arreglo de personajes esta lleno\n");
+        printf("Vuelva a vaciar el contador!\n");
     }    
 }
 
@@ -36,7 +37,7 @@ void mostrar_personajes() {
     {
         printf("Nombre: %s\n", personajes[i].nombre);
         printf("Tipo: %s\n", personajes[i].tipo);
-        printf("Fuerza: %f\n", personajes[i].fuerza);
+        printf("Fuerza: %i\n", personajes[i].fuerza);
         printf("Salud: %i\n", personajes[i].salud);
     }    
 }
